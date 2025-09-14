@@ -22,10 +22,19 @@ meson build
 ninja -C build
 sudo ninja -C build install
 
-# other
-sudo pacman -S fastfetch gdm cmatrix telegram-desktop nodejs docker
+# Display managers 
+sudo pacman -S gdm
 
+# other
+sudo pacman -S fastfetch cmatrix telegram-desktop nodejs docker
 sudo pacman -S hyprshot
+
+# media
+sudo pacman -S vlc vlc-plugin-ffmpeg 
+
+# torrent
+sudo pacman -S transmission-gtk
+xdg-mime default thunar.desktop inode/directory
 
 # install steam
 sudo pacman -S flatpak
