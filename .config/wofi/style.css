@@ -16,19 +16,20 @@ window {
   color: #c0caf5;
   outline: none;
   box-shadow: none;
-  border: 0;
-  border-radius: 0;
-  font-size: 1rem;
-  padding: 0.5rem;
+  border: 2px solid #c0caf5;
+  font-size: 1.5rem;
+  padding: 0.75rem 1rem;
+  margin: 15px 15px 0;
+  border-radius: 10px;
 }
 
 #inner-box {
   margin: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 #img {
-  margin: 10px 10px;
+  margin: 5px 5px;
 }
 
 #entry {
@@ -36,11 +37,10 @@ window {
 }
 
 #entry:selected {
-  background-color: #c0caf5;
+  background: linear-gradient(45deg, #33ccff, #00ff99);
   outline: none;
 }
 
 #text:selected {
   color: #1a1b26;
 }
-

@@ -4,6 +4,10 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
+# copy-paste fix
+sudo pacman -S clipman
+yay -S wl-clipboard-x11
+
 # change shall
 sudo chhs /bin/zsh
 
@@ -25,8 +29,15 @@ sudo ninja -C build install
 # Display managers 
 sudo pacman -S gdm
 
+# Docker
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+sudo pacman -S docker docker-buildx docker-compose
+docker run hello-world
+
 # other
-sudo pacman -S fastfetch cmatrix telegram-desktop nodejs docker
+sudo pacman -S fastfetch cmatrix telegram-desktop nodejs 
 sudo pacman -S hyprshot
 
 # media
@@ -43,3 +54,10 @@ flatpak --user install flathub com.valvesoftware.Steam
 
 # run
 flatpak run com.valvesoftware.Steam
+
+# install hearthstone
+sudo pacman -S base-devel crypto++ webkit2gtk git curl python python-virtualenv
+git clone --recursive https://github.com/0xf4b1/hearthstone-linux.git && cd hearthstone-linux
+bash hearthstone-linux/craft.sh
+cd hearthstone
+bash ./login

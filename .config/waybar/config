@@ -16,11 +16,15 @@
     "custom/separator",
     "network",
     "battery",
+    "custom/separator",
     "cpu",
     "memory",
+    "disk",
     "temperature",
     "custom/separator",
     "clock",
+    "custom/separator",
+    "tray",
     "custom/separator",
     "custom/power"
   ],
@@ -29,11 +33,18 @@
     "interval": "once",
     "tooltip": false
   },
+  "disk": {
+    "interval": 60,
+    "format": " {percentage_used}%",
+    "tooltip": true,
+    "tooltip-format": "{used} used out of {total} on {path}",
+    "unit": "GB"
+  },
   "hyprland/language": {
     "format": "{short} "
   },
   "hyprland/windowcount": {
-    "format": "[{}]",
+    "format": "[{}] ",
     "separate-outputs": true
   },
   "hyprland/window": {
@@ -67,10 +78,10 @@
         4,
         5
       ]
-    },
+    }
   },
   "clock": {
-    "format": "{:%y-%m-%d %H:%M}",
+    "format": "{:%y-%m-%d %H:%M}"
   },
   "cpu": {
     "format": " {usage}%",
@@ -134,9 +145,14 @@
     },
     "on-click": "pavucontrol"
   },
+  "tray": {
+    "icon-size": 20,
+    "show-passive-items": true,
+    "spacing": 5
+  },
   "custom/power": {
     "format": "  ",
     "tooltip": false,
-    "on-click": "wlogout --protocol layer-shell"
+    "on-click": "wlogout -p layer-shell -b 5"
   }
 }

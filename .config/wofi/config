@@ -1,6 +1,6 @@
 show=drun
 width=45%
-height=40%
+height=70%
 prompt=Search...
 normal_window=true
 location=center
@@ -13,3 +13,4 @@ no_actions=true
 orientation=vertical
 halign=fill
 content_halign=fill
+columns=2

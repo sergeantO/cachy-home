@@ -17,8 +17,7 @@ window#waybar>box {
   border: 2px solid transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
-  margin: 10px 5px;
-  margin-bottom: 0;
+  margin: 0 5px;
 }
 
 button {
