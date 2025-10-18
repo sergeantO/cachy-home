@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "margin-top": 10,
+  "margin-top": 5,
   "margin-left": 5,
   "margin-right": 5,
   "height": 28,
@@ -14,18 +14,17 @@
     "hyprland/window"
   ],
   "modules-center": [
-    "hyprland/workspaces",
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "hyprland/language",
     "custom/separator",
     "pulseaudio",
-    "custom/separator",
-    "network",
+    "backlight",
     "battery",
-    "clock",
+    "network",
     "custom/separator",
-    "tray",
+    "clock",
     "custom/separator",
     "custom/power"
   ],
@@ -41,8 +40,16 @@
     "tooltip-format": "{used} used out of {total} on {path}",
     "unit": "GB"
   },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      ""
+    ]
+  },
   "hyprland/language": {
-    "format": "{flag} {short} ",
+    "format": "{short} ",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
   },
   "hyprland/windowcount": {
@@ -111,7 +118,7 @@
       "warning": 40,
       "critical": 20
     },
-    "format": "{icon}  {capacity}%",
+    "format": "{icon} {capacity}%",
     "format-full": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
@@ -150,11 +157,6 @@
       ]
     },
     "on-click": "pavucontrol"
-  },
-  "tray": {
-    "icon-size": 20,
-    "show-passive-items": true,
-    "spacing": 10
   },
   "custom/power": {
     "format": "  ",
