@@ -175,6 +175,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { desc = 'Open [E]xplre' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -876,15 +877,15 @@ require('lazy').setup({
   },
 
   {
-    "loctvl842/monokai-pro.nvim",
+    'loctvl842/monokai-pro.nvim',
     config = function()
-      require("monokai-pro").setup()
+      require('monokai-pro').setup()
 
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       vim.cmd.colorscheme 'monokai-pro-classic'
-    end
+    end,
   },
 
   { -- You can easily change to a different colorscheme.

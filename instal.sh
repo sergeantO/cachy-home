@@ -24,8 +24,9 @@ cp ./kitty-themes/themes/Monokai_Classic.conf ~/.config/kitty/theme.conf
 # change shall
 sudo pacman -S fish
 cd $(mktemp -d)
+fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-sudo chhs -s $(which fish)
+sudo chsh -s $(which fish)
 fisher install IlanCosman/tide@v6
 tide configure
 
@@ -74,9 +75,11 @@ docker run hello-world
 # dev env
 sudo pacman -S jdk21-openjdk
 sudo pacman -S kotlin
-sudo pacman -S nodejs
 sudo pacman -S go
 sudo pacman -S rust
+sudo pacman -S nodejs
+sudo npm install -g pnpm@latest-10
+sudo npm install -g degit
 
 # Insomnia REST Client Arch installer
 cd $(mktemp -d)
