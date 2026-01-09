@@ -33,8 +33,20 @@ tide configure
 # Jura fort
 cp ./fonts/Jura usr/share/fonts
 
+
+#
+# IDE's
+#
+
 # neovim
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
+
+# vscode
+sudo pacman -S code
+
+# zed
+curl -f https://zed.dev/install.sh | sh
+source ~/.config/fish/config.fish
 
 # base desktop env
 sudo pacman -S hyprshot mng-look thunar gdm
@@ -62,8 +74,7 @@ sudo pacman -S vlc vlc-plugin-ffmpeg
 sudo pacman -S transmission-gtk
 xdg-mime default thunar.desktop inode/directory
 
-# vscode
-sudo pacman -S code
+
 
 # Docker
 sudo groupadd docker
