@@ -49,7 +49,7 @@ curl -f https://zed.dev/install.sh | sh
 source ~/.config/fish/config.fish
 
 # base desktop env
-sudo pacman -S hyprshot mng-look thunar gdm
+sudo pacman -S dunst hyprshot mng-look thunar gdm
 
 # Compiling wlogout from Source
 sudo pacman -S meson
@@ -114,3 +114,7 @@ sudo pacman -S base-devel crypto++ webkit2gtk git curl python python-virtualenv
 git clone --recursive https://github.com/0xf4b1/hearthstone-linux.git && cd hearthstone-linux
 bash hearthstone-linux/craft.sh
 bash hearthstone/login
+
+
+# ln
+ln -s /home/odmen/Documents/cachy-home/.config/dunst ~/.config/dunst
